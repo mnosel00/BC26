@@ -43,7 +43,7 @@ plt.plot(df_merged['data'], df_merged['iloczyn_arbitrazu'], label='Iloczyn arbit
 
 plt.axhline(y=1, color='green', linestyle='--', label='Granica zysku (1.0)')
 
-plt.title('Arbitraż trójkątny USDT -> BTC -> ETH -> USDT')
+plt.title('Arbitraż  USDT -> BTC -> ETH -> USDT')
 plt.xlabel('Czas')
 plt.ylabel('Wartość początkowego 1 USDT po cyklu')
 plt.legend()

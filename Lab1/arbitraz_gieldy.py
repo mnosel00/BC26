@@ -23,7 +23,7 @@ plt.plot(df_merged['data'], df_merged['zysk_brutto_USD'], label='Zysk brutto z a
 
 plt.axhline(y=0, color='green', linestyle='--', label='Brak różnicy w cenie')
 
-plt.title('Prosty arbitraż BTC między giełdami Bitstamp a Kraken')
+plt.title('Arbitraż BTC między Bitstamp a Kraken')
 plt.xlabel('Czas')
 plt.ylabel('Różnica w cenie (USD)')
 plt.legend()
