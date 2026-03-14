@@ -25,19 +25,15 @@ df_btc_usdt = wczytaj_dane(plik_btc_usdt, 'BTCUSDT')
 df_eth_btc = wczytaj_dane(plik_eth_btc, 'ETHBTC')
 df_eth_usdt = wczytaj_dane(plik_eth_usdt, 'ETHUSDT')
 
-print("Łączę tabele...")
 df_merged = pd.merge(df_btc_usdt, df_eth_btc, on='close_time')
 df_merged = pd.merge(df_merged, df_eth_usdt, on='close_time')
 
-print("Obliczam arbitraż...")
 df_merged['cena_USDTETH'] = 1 / df_merged['cena_ETHUSDT']
 
 df_merged['iloczyn_arbitrazu'] = df_merged['cena_BTCUSDT'] * df_merged['cena_ETHBTC'] * df_merged['cena_USDTETH']
 
-print("\nOto pierwsze 5 wierszy gotowej tabeli:")
 print(df_merged.head())
 
-print("Rysuję wykres...")
 
 df_merged['data'] = pd.to_datetime(df_merged['close_time'], unit='us')
 
