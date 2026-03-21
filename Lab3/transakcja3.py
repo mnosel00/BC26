@@ -109,10 +109,10 @@ def main():
     sender_wif = "cPt8jQem9KdQisAXG4K9cEPPZqbUA1FdZ7rm3QxbWwTmxRQ7bhZX"
 
     # 2. Adres odbiorcy P2PKH testnet
-    recipient_address_str = "mk3mV6xcnVXqXGrZQLVgCwTuEKDdaW1UEr"
+    recipient_address_str = "n1F4cYWCbzN7xFpCsAWo78NWmmjpoMCP59"
 
     # 3. Kwota do wysłania w satoshi
-    amount_to_send = 100
+    amount_to_send = 9_000
 
     # Tworzymy obiekt klucza prywatnego z WIF
     sender_priv = PrivateKey.from_wif(sender_wif)
